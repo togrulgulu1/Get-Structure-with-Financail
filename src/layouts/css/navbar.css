@@ -1,0 +1,163 @@
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f7f9;
+    border-bottom: 1px solid #00001f;
+    position: sticky;
+    top: 0;
+    padding: 20px 40px;
+}
+
+#header .flex {
+    justify-content: space-between;
+}
+
+
+
+.navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 58%;
+}
+
+.navbar {
+    border: 1px solid #00001f;
+    border-radius: 6px;
+    padding: 5px 11px;
+    box-shadow: 0 6px 12px -5px rgb(0 0 31 / 25%);
+}
+
+.navbar li {
+    padding: 4px .5rem 4px .75rem;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navbar li:hover {
+    background-color: #fff1c4;
+    background-image: url("../image/navhover.svg");
+    background-position: 1%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 4px;
+}
+
+.contact{
+    box-shadow: 0 6px 12px -5px rgb(0 0 31 / 25%);
+    border: 1px solid #00001f;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #fff;
+    width: 180px !important;
+}
+
+.contact .contBtn {
+    text-align: center;
+    padding-left: 25px;
+    color: #00001f;
+    font-size: 14px;
+}
+
+.contact .contBtn > span,
+.contact .userIcon{
+    position: relative;
+    z-index: 2;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #5ac1ff;
+    transition: left 0.3s ease;
+    z-index: 1;
+}
+
+.contact:hover::before {
+    left: 0;
+}
+
+.contact .userIcon{
+    border-left: 1px solid #00001f;
+    min-height: 47px;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5ac1ff;
+}
+
+.burgerMenu{
+    display: none;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 991px){
+
+    .navMenu{
+        display: inline-block;
+        position: absolute;
+        top: 80px;
+        opacity: 0;
+        left: 0;
+        background-color: red;
+        height: 300px;
+        padding: 25px;
+        width: 100%;
+        transition: 0.3s ;
+
+    }
+
+    .navMenu.active{
+        /* top: 100%; */
+        opacity: 1;
+    }
+
+    .navbar{
+        border: none;
+        box-shadow: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar li{
+        font-size: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #00001f;
+        width: 100%;
+    }
+
+    .contact{
+        top: 30px;
+        /* width: 25%; */
+    }
+
+    .navbar .flex{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .burgerMenu{
+        display: inline-block;
+    }
+
+    .burgerMenu button{
+        width: 42px;
+        height: 40px;
+        font-size: 20px;
+        background-color: transparent;
+        border: 1px solid #00001f;
+        border-radius: 5px;
+    }
+}
