@@ -9,6 +9,12 @@ const Navbar = () => {
 
     const click = () => {
         setActive(!active)
+
+        if(!active){
+            document.body.classList.add('menu-open')
+        }else{
+            document.body.classList.remove('menu-open')
+        }
     }
 
 
@@ -21,9 +27,13 @@ const Navbar = () => {
                     <img src={logo} alt="#" />
                 </div>
 
-                <div className='burgerMenu'>
+                <div className={`burgerMenu ${active ? 'active': ''}`}>
                     <button onClick={click}>
-                        <i class="fa-solid fa-bars"></i>
+                        <ul>
+                            <li className="bar"></li>
+                            <li className="bar"></li>
+                            <li className="bar"></li>
+                        </ul>
                     </button>
                 </div>
 
