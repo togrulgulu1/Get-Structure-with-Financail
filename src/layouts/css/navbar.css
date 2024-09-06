@@ -112,8 +112,6 @@
         left: 0;
         height: 0;
         background-color: #ffffff;
-        /* min-height: 300px; */
-        /* padding: 25px 0; */
         width: 100%;
         transition: height 0.5s , opacity 0.5s ease;
         overflow: hidden;
@@ -145,6 +143,10 @@
         padding-left: 40px;
         padding-bottom: 10px;
         pointer-events: none;
+    }
+
+    .navbar li:first-child{
+        margin-top: 25px;
     }
 
     .contact {
